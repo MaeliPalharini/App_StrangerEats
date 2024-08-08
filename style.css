@@ -1,0 +1,152 @@
+body {
+    font-family: 'Roboto Light', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+}
+
+.topo {
+    background-color: #000000;
+    text-align: center;
+    position: fixed;
+    max-width: 100%;
+    width: 412px;
+    height: 92px;
+    top: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    z-index: 1000;
+}
+
+.titulo {
+    max-width: 100%;
+    margin-top: 2px;
+    width: 412px;
+    padding: 10px;
+    background-color: #f0f0f0;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    color: #350dc5;
+}
+
+.logo {
+    margin-top: 10px;
+    width: 200px;
+    height: 80px;
+}
+
+.corpo {
+    background-color: #000000;
+    max-width: 100%;
+    width: 412px;
+    margin-top: 80px;
+    padding: 10px 0;
+}
+
+.categoria1 {
+    margin-top: 50px;
+    margin-left: 19px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.titulo_corpo {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.categoria1::-webkit-scrollbar {
+    display: none;
+}
+
+.itens {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+}
+
+.itens::-webkit-scrollbar {
+    display: none;
+}
+
+.item {
+    background-color: #910808;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    width: 172px;
+    height: 216px;
+    flex: 0 0 172px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+.item img {
+    max-width: 100%;
+    border-radius: 5px;
+    width: 144px;
+    height: 87px;
+}
+
+.nome {
+    font-weight: bold;
+    color: #fff;
+}
+
+.descricao {
+    color: #ffffff;
+}
+
+.preco {
+    padding: 10px;
+    color: #350dc5;
+    margin-top: auto;
+}
+
+.botao {
+    background-color: #350dc5;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.botao-finalizar {
+    background-color: #910808;
+    color: #350dc5;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.botao-finalizar:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.audio-player {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.play-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.play-button img {
+    width: 30px;
+    height: 30px;
+}
