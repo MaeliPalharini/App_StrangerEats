@@ -4,125 +4,144 @@
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-<!--    <meta http-equiv="X-UA-Compatible" content="ie=edge">-->
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
     <title>StrangerEats</title>
 </head>
 <body>
     <div class="topo">
-        <img src="assets/Logo1.png" alt="Logotipo Stranger Eats" class="logo">
-        <div class="topo-texto">
-            <p class="titulo">Sua comida em 6 minutos!</p>
-            <div class="audio-player">
-                <audio id="stranger-audio" src="assets/stranger-things-theme.mp3"></audio>
-                <button id="play-button" class="play-button">
-                    <img src="assets/play-icon.png" alt="Play">
-                </button>
-            </div>
+        <div class="titulo">
+            <h1>Stranger Eats</h1>
+        </div>
+        <div class="topo_logo_audio">
+            <button id="play-button" class="play-button">
+                <img src="assets/play.png" alt="Play">
+                <audio id="stranger-audio" src="assets/music.mp3"></audio>
+            </button>
+        </div>
+        <div class="slogan">
+            <p>Sua comida exótica em 6 minutos!</p>
         </div>
     </div>
     <div class="corpo">
+        <div class="borda">
+            <img src="assets/borda.png" alt="borda">
+        </div>
         <div class="categoria">
-            <h1 class="titulo_corpo">Primeiro, escolha seu prato.</h1>
+            <h2 class="titulo_corpo">Primeiro, escolha seu prato.</h2>
             <div class="itens">
                 <div class="item">
                     <img src="assets/stargazy.png" alt="stargazy"> <br>
-                    <p class="nome">Stargazy (Inglaterra)</p>
+                    <p class="nome">Stargazy</p>
+                    <p class="pais">Inglaterra</p>
                     <p class="descricao">Torta de sardinhas assadas com as cabeças para fora.</p>
                     <p class="preco">R$ 60,00</p>
                 </div>
                 <div class="item">
                     <img src="assets/polvo1.png" alt="polvo"> <br>
-                    <p class="nome">Sannakji (Coreano)</p>
+                    <p class="nome">Sannakji</p>
+                    <p class="pais">Corea</p>
                     <p class="descricao">Deliciosos pedaços de polvo vivos.</p>
                     <p class="preco">R$ 36,00</p>
                 </div>
                 <div class="item">
                     <img src="assets/balu.png" alt="balu"> <br>
-                    <p class="nome">Ballut (Filipinas)</p>
+                    <p class="nome">Ballut</p>
+                    <p class="pais">Filipinas</p>
                     <p class="descricao">Ovo de pata, embriões parcialmente desenvolvidos.</p>
                     <p class="preco">R$ 24,00</p>
                 </div>
                 <div class="item">
                     <img src="assets/cazu.png" alt="cazu"> <br>
-                    <p class="nome">Casu marzu (Itália)</p>
+                    <p class="nome">Casu marzu</p>
+                    <p class="pais">Itália</p>
                     <p class="descricao">Queijo de ovelha, larvas vivas de mosca em sua maturação.</p>
                     <p class="preco">R$ 68,75</p>
                 </div>
                 <div class="item">
                     <img src="assets/haggis.png" alt="estomago"> <br>
-                    <p class="nome">Haggis(Escócia)</p>
+                    <p class="nome">Haggis</p>
+                    <p class="pais">Escócia</p>
                     <p class="descricao">Bucho de ovelha, saco estomacal recheado com vísceras.</p>
                     <p class="preco">R$ 60,00</p>
                 </div>
             </div>
         </div>
         <div class="categoria">
-            <h1 class="titulo_corpo">Agora, escolha sua bebida.</h1>
+            <h2 class="titulo_corpo">Agora, escolha sua bebida.</h2>
             <div class="itens">
                 <div class="item">
-                    <img src="assets/vinho-cobra.png" alt="vinho"> <br>
-                    <p class="nome">Shé Jiǔ (China)</p>
-                    <p class="descricao">Infusão de uma cobra inteira em álcool, geralmente vinho de arroz.</p>
+                    <img src="assets/cobra.png" alt="vinho"><br>
+                    <p class="nome">Shé Jiǔ</p>
+                    <p class="pais">China</p>
+                    <p class="descricao">Infusão de uma cobra em vinho de arroz.</p>
                     <p class="preco">R$ 350,00</p>
                 </div>
                 <div class="item">
                     <img src="assets/cerva.png" alt="cerveja"><br>
-                    <p class="nome">Rocky Mountain Oysters (EUA)</p>
+                    <p class="nome">Mountain Oysters</p>
+                    <p class="pais">EUA</p>
                     <p class="descricao">Cerveja com testículos de touro defumado.</p>
                     <p class="preco">R$ 45,00</p>
                 </div>
                 <div class="item">
                     <img src="assets/vinhog.png" alt="vinho"><br>
-                    <p class="nome">Seagull Wine (Groenlândia)</p>
+                    <p class="nome">Seagull Wine</p>
+                    <p class="pais">Groenlândia</p>
                     <p class="descricao">Gaivota morta fermentada em alcool.</p>
                     <p class="preco">R$ 1000,00</p>
                 </div>
                 <div class="item">
-                    <img src="assets/veado.png" alt="chot"> <br>
-                    <p class="nome">Stag Sêmen Shots (Nova Zelândia)</p>
+                    <img src="assets/veado.png" alt="chot"><br>
+                    <p class="nome">Stag Sêmen Shots</p>
+                    <p class="pais">Nova Zelândia</p>
                     <p class="descricao">Sêmen de veado com vodka.</p>
                     <p class="preco">R$ 200,00</p>
                 </div>
                 <div class="item">
                     <img src="assets/dedo.png" alt="dedo"><br>
-                    <p class="nome">Sourtoe Cocktail (Canadá)</p>
+                    <p class="nome">Sourtoe Cocktail</p>
+                    <p class="pais">Canadá</p>
                     <p class="descricao">Os lábios devem tocar o dedo com wisky.</p>
                     <p class="preco">R$ 75,00</p>
                 </div>
             </div>
         </div>
         <div class="categoria">
-            <h1 class="titulo_corpo">Finalmente, escolha sua sobremessa!</h1>
+            <h2 class="titulo_corpo">Finalmente, escolha sua sobremessa!</h2>
             <div class="itens">
                 <div class="item">
                     <img src="assets/tavu.png" alt="tavu"> <br>
-                    <p class="nome">Tavuk göğsü (Turquia)</p>
+                    <p class="nome">Tavuk göğsü</p>
+                    <p class="pais">Turquia</p>
                     <p class="descricao">Peito de frango com leite condensado e canela.</p>
                     <p class="preco">R$ 20,00</p>
                 </div>
                 <div class="item">
-                    <img src="assets/aletria.png" alt="balut"> <br>
-                    <p class="nome">Aletria (Portugal)</p>
+                    <img src="assets/aletria.png" alt="aletria"> <br>
+                    <p class="nome">Aletria </p>
+                    <p class="pais">Portugal</p>
                     <p class="descricao"> Macarrão ao leite com casca de limão e canela.</p>
                     <p class="preco">R$ 27,50</p>
                 </div>
                 <div class="item">
-                    <img src="assets/gelatina.png" alt="stargazy"> <br>
-                    <p class="nome">Jell-O Salad (EUA)</p>
+                    <img src="assets/gelatina.png" alt="jell"> <br>
+                    <p class="nome">Jell-O Salad</p>
+                    <p class="pais">EUA</p>
                     <p class="descricao">Combinação de gelatina com uma variedade de vegetais.</p>
                     <p class="preco">R$ 25,00</p>
                 </div>
                 <div class="item">
                     <img src="assets/choco.png" alt="barra"> <br>
-                    <p class="nome">Barra de chocolate com larvas (Portugal)</p>
+                    <p class="nome">Chocolarvas</p>
+                    <p class="pais">Portugal</p>
                     <p class="descricao">Barrinha proteica de larvas com chocolate.</p>
                     <p class="preco">R$ 30,00</p>
                 </div>
                 <div class="item">
                     <img src="assets/bolinho.png" alt="brownie"> <br>
-                    <p class="nome">Sanguinaccio Dolce (Itália)</p>
+                    <p class="nome">Sanguinaccio Dolce</p>
+                    <p class="pais">Itália</p>
                     <p class="descricao">Pudim de chocolate feito com sangue de porco.</p>
                     <p class="preco">R$ 26,00</p>
                 </div>
@@ -130,7 +149,7 @@
         </div>
     </div>
     <div class="botao">
-        <button class="botao-finalizar">Selecione os 3 itens para fechar o pedido</button>
+        <button class="botao-finalizar">Selecione os 3 itens <br> para fechar o pedido<br></button>
     </div>
 <script src="js/script.js"></script>
 </body>

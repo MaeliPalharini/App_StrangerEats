@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Righteous&display=swap');
+
 body {
-    font-family: 'Roboto Light', sans-serif;
+    font-family: 'Righteous Light', sans-serif;
     font-weight: 400;
     font-size: 18px;
     margin: 0;
@@ -7,64 +9,78 @@ body {
 }
 
 .topo {
-    background-color: #000000;
+    background-color: #220058;
     text-align: center;
     position: fixed;
-    max-width: 100%;
-    width: 412px;
-    height: 92px;
+    width: 100%;
+    /*height: 92px;*/
     top: 0;
     display: flex;
     align-items: center;
-    flex-direction: column;
+    flex-direction: row;
     z-index: 1000;
+    box-sizing: border-box;
+    box-shadow: 0 4px 10px rgb(96, 93, 100);
 }
 
 .titulo {
-    max-width: 100%;
-    margin-top: 2px;
-    width: 412px;
-    padding: 10px;
-    background-color: #f0f0f0;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    color: #350dc5;
+    width: 100%;
+    color: red;
+    margin: 10px 0 10px 20px;
+    font-size:40px;
+    font-family: "Righteous", sans-serif;
+    font-weight: 400;
 }
 
-.logo {
-    margin-top: 10px;
-    width: 200px;
-    height: 80px;
+.topo_logo_audio .titulo .slogan{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
 }
+
+.slogan {
+    margin-top: 2px;
+    width: 100%;
+    padding: 10px;
+    color: #fd0000;
+    font-family: "Roboto Light", sans-serif;
+}
+
+.borda img{
+    width: 100%;
+    margin: 0 -20px -10px -2px;
+    height: 78px;
+   }
 
 .corpo {
-    background-color: #000000;
+    background-color: #fdfdfd;
     max-width: 100%;
-    width: 412px;
+    width: 100%;
     margin-top: 80px;
-    padding: 10px 0;
+    padding-bottom: 100px;
 }
 
-.categoria1 {
-    margin-top: 50px;
-    margin-left: 19px;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
+.categoria{
+    margin-top: 5px;
+    margin-left: 10px;
+    overflow-x: scroll;
 }
 
 .titulo_corpo {
-    margin-top: 10px;
+    margin-top: 8px;
     margin-bottom: 10px;
-    color: #fff;
-}
-
-.categoria1::-webkit-scrollbar {
-    display: none;
+    color: #000000;
+    margin-left: 10px;
+    font-size: 20px;
+    font-family: "Righteous", sans-serif;
+    font-weight: 400;
 }
 
 .itens {
     display: flex;
-    gap: 10px;
-    overflow-x: auto;
+    gap: 13px;
+    overflow-x: scroll;
+    margin-left: 10px;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
 }
@@ -74,59 +90,90 @@ body {
 }
 
 .item {
-    background-color: #910808;
-    border: 1px solid #000000;
-    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #b90e0e;
+    border-radius: 9px;
     padding: 10px;
     text-align: center;
     width: 172px;
     height: 216px;
     flex: 0 0 172px;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
+    object-fit: cover;
+    position: relative;
+    cursor: pointer;
 }
 
 .item img {
     max-width: 100%;
     border-radius: 5px;
+    position: relative;
+    object-fit: cover;
     width: 144px;
     height: 87px;
+    margin:3px 3px 5px 3px;
 }
 
 .nome {
-    font-weight: bold;
-    color: #fff;
+    font-family: "Righteous", sans-serif;
+    color: #220056;
+    font-size: 19px;
+    margin-top: -16px;
+}
+
+.pais {
+    font-size: 14px;
+    font-family: "Dancing Script", cursive;
+    color: #ffffff;
+    margin-top: 3px;
+    margin-bottom: 8px;
 }
 
 .descricao {
     color: #ffffff;
+    font-size:15px;
 }
 
 .preco {
-    padding: 10px;
-    color: #350dc5;
+    padding: 5px;
+    color: #f6f4fa;
+    font-size: 16px;
+    border-radius: 5px;
+    display: block;
+    text-align: center;
     margin-top: auto;
 }
 
 .botao {
-    background-color: #350dc5;
+    align-content: center;
+    background-color: #220057;
     padding: 10px;
     text-align: center;
     position: fixed;
     bottom: 0;
     width: 100%;
+    height: 80px;
     z-index: 1000;
 }
 
 .botao-finalizar {
-    background-color: #910808;
-    color: #350dc5;
+    background-color: #9b9292;
+    color: #fdfdfd;
     border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    border-radius: 5px;
+    font-size: 20px;
+    border-radius: 50px;
     cursor: pointer;
+    width:364px;
+    height: 61px;
+}
+
+.botao-finalizar:hover {
+    transition: background-color 600ms;
+    cursor: pointer;
+    background-color: #d043c7;
+    transform: scale(105%);
 }
 
 .botao-finalizar:disabled {
@@ -144,9 +191,11 @@ body {
     background: none;
     border: none;
     cursor: pointer;
+    margin-left: 10px;
+    margin-top: 10px;
 }
 
 .play-button img {
-    width: 30px;
-    height: 30px;
+    width: 75px;
+    height: 75px;
 }
