@@ -1,7 +1,9 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // Controle de Áudio
     const audio = document.getElementById('stranger-audio');
     const playButton = document.getElementById('play-button');
     let isPlaying = false;
+    audio.volume = 1.0;
 
     audio.addEventListener('loadeddata', function() {
         playButton.disabled = false;
@@ -17,27 +19,27 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         isPlaying = !isPlaying;
     });
-});
 
-
-// Seleção de itens
+    // Seleção de Itens
     document.querySelectorAll('.item').forEach(item => {
         item.addEventListener('click', function() {
             const categoria = this.getAttribute('data-categoria');
 
+            // Remove a classe 'selecionado' de todos os itens da mesma categoria
             document.querySelectorAll(`.item[data-categoria="${categoria}"]`).forEach(el => {
                 el.classList.remove('selecionado');
             });
 
+            // Adiciona a classe 'selecionado' ao item clicado
             this.classList.add('selecionado');
 
+            // Verifica se todos os itens necessários foram selecionados
             verificarItensSelecionados();
         });
     });
 
-
     function verificarItensSelecionados() {
-        const categorias = ['pratos', 'bebidas', 'sobremesas']; // IDs ou categorias que você definiu
+        const categorias = ['pratos', 'bebidas', 'sobremesas'];
         let todasSelecionadas = true;
 
         categorias.forEach(categoria => {
@@ -57,8 +59,3 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 });
-
-
-
-
-
