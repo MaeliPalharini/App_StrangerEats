@@ -6,61 +6,67 @@ body {
     font-size: 18px;
     margin: 0;
     padding: 0;
+    background-color: #eaeaea;
 }
 
 .topo {
     background-color: #220058;
-    text-align: center;
     position: fixed;
     width: 100%;
-    /*height: 92px;*/
+    height: 60px;
     top: 0;
     display: flex;
     align-items: center;
-    flex-direction: row;
+    justify-content: space-between;
     z-index: 1000;
-    box-sizing: border-box;
-    box-shadow: 0 4px 10px rgb(96, 93, 100);
 }
 
 .titulo {
     width: 100%;
     color: red;
-    margin: 10px 0 10px 20px;
-    font-size:40px;
+    margin: 10px 0 10px 40px;
+    font-size: 40px;
     font-family: "Righteous", sans-serif;
     font-weight: 400;
 }
 
-.topo_logo_audio .titulo .slogan{
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
+.topo_logo_audio {
+    margin-top: 35px;
+}
+
+.play-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.play-button img {
+    width: 80px;
+    height: 70px;
 }
 
 .slogan {
-    margin-top: 2px;
+    position: fixed;
+    top: 60px;
     width: 100%;
-    padding: 10px;
-    color: #fd0000;
-    font-family: "Roboto Light", sans-serif;
-}
+    color: #ffffff;
+    background-color: #220057;
+    padding-left: 34px;
+    box-shadow: 0 8px 10px rgb(96, 93, 100);
+    z-index: 999;
+    height: 32px;
 
-.borda img{
-    width: 100%;
-    margin: 0 -20px -10px -2px;
-    height: 78px;
-   }
+}
 
 .corpo {
-    background-color: #fdfdfd;
+    background-color: #ececec;
     max-width: 100%;
     width: 100%;
-    margin-top: 80px;
-    padding-bottom: 100px;
+    padding-top: 120px;
+    padding-bottom: 110px;
 }
 
-.categoria{
+.categoria {
     margin-top: 5px;
     margin-left: 10px;
     overflow-x: scroll;
@@ -94,7 +100,7 @@ body {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    background-color: #b90e0e;
+    background-color: #ffffff;
     border-radius: 9px;
     padding: 10px;
     text-align: center;
@@ -104,6 +110,18 @@ body {
     object-fit: cover;
     position: relative;
     cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.item.selecionado {
+    border: 2px solid #c71bbe;
+    box-shadow: 0 10px 10px rgb(96, 93, 100);
+}
+
+.item:hover {
+    transition: background-color 600ms;
+    border-color: #d043c7;
+    transform: scale(105%);
 }
 
 .item img {
@@ -113,7 +131,7 @@ body {
     object-fit: cover;
     width: 144px;
     height: 87px;
-    margin:3px 3px 5px 3px;
+    margin: 3px 3px 5px 3px;
 }
 
 .nome {
@@ -126,19 +144,20 @@ body {
 .pais {
     font-size: 14px;
     font-family: "Dancing Script", cursive;
-    color: #ffffff;
+    font-style: italic;
+    color: #220055;
     margin-top: 3px;
     margin-bottom: 8px;
 }
 
 .descricao {
-    color: #ffffff;
-    font-size:15px;
+    color: #000000;
+    font-size: 15px;
 }
 
 .preco {
     padding: 5px;
-    color: #f6f4fa;
+    color: #000000;
     font-size: 16px;
     border-radius: 5px;
     display: block;
@@ -159,43 +178,89 @@ body {
 }
 
 .botao-finalizar {
-    background-color: #9b9292;
-    color: #fdfdfd;
+    background-color: #eaeaea;
+    color: #220055;
     border: none;
     font-size: 20px;
     border-radius: 50px;
     cursor: pointer;
-    width:364px;
+    width: 364px;
     height: 61px;
 }
 
 .botao-finalizar:hover {
     transition: background-color 600ms;
     cursor: pointer;
-    background-color: #d043c7;
+    background-color: #9a9999;
+    color: #ececec;
     transform: scale(105%);
 }
 
 .botao-finalizar:disabled {
-    background-color: #ccc;
+    background-color: #c61bbd;
     cursor: not-allowed;
 }
 
-.audio-player {
-    display: flex;
-    align-items: center;
-    margin-top: 10px;
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; /* Cobre toda a largura da tela */
+    height: 100%; /* Cobre toda a altura da tela */
+    background-color: rgba(232, 224, 224, 0.7); /* Fundo semitransparente */
+    z-index: 1000; /* Coloca o overlay acima de outros elementos */
+    display: none; /* Começa oculto */
 }
 
-.play-button {
-    background: none;
-    border: none;
-    cursor: pointer;
-    margin-left: 10px;
-    margin-top: 10px;
+.oculto {
+    display: none; /* Esconde o elemento */
 }
 
-.play-button img {
-    width: 75px;
-    height: 75px;
+.confirmacao-pedido-oculto {
+    background-color: #4CAF50; /* Cor de fundo verde */
+    color: white; /* Cor do texto */
+    padding: 20px; /* Espaçamento interno */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para destacar o card */
+    text-align: center; /* Centralizar o texto */
+    width: 300px; /* Largura do card */
+    margin: auto; /* Centralizar horizontalmente */
+    position: relative; /* Permite o ajuste de posicionamento se necessário */
+}
+
+.confirmacao-pedido-oculto h2 {
+    font-size: 1.5em; /* Tamanho do título */
+    margin-bottom: 20px; /* Espaçamento abaixo do título */
+}
+
+.resumo-pedido {
+    list-style-type: none;
+    padding: 0;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+
+.total-pedido {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.confirmar-pedido {
+    background-color: white; /* Fundo branco */
+    color: #4CAF50; /* Texto verde */
+    border: none; /* Sem bordas */
+    padding: 10px 20px; /* Espaçamento interno dos botões */
+    border-radius: 20px; /* Bordas arredondadas dos botões */
+    font-size: 1em; /* Tamanho do texto dos botões */
+    cursor: pointer; /* Mãozinha ao passar o mouse */
+    width: 80%; /* Largura dos botões */
+    margin-bottom: 10px; /* Espaçamento entre os botões */
+}
+
+.cancelar-pedido {
+    background-color: transparent; /* Fundo transparente para o botão "Cancelar" */
+    color: white; /* Texto branco */
+    border: none; /* Sem bordas */
+    cursor: pointer; /* Mãozinha ao passar o mouse */
 }
