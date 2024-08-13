@@ -101,6 +101,7 @@ body {
     overflow-x: scroll;
     scrollbar-width: none;
     margin: 10px;
+    height: 243px;
 }
 
 .itens::-webkit-scrollbar {
@@ -126,7 +127,7 @@ body {
 
 .item.selecionado {
     border: 3px solid #d31313;
-    box-shadow: 0 7px 10px rgb(96, 93, 100);
+    /*box-shadow: 0 7px 10px rgb(96, 93, 100);*/
 }
 
 .item:hover {
@@ -325,7 +326,7 @@ body {
 }
 
 .botao-retorno {
-    background-color: rgba(45, 42, 42, 0.5);
+    background-color: rgb(253, 0, 0);
     color: white;
     border: none;
     padding: 15px 30px;
@@ -333,15 +334,3 @@ body {
     border-radius: 20px;
     cursor: pointer;
 }
-
- .botao-retorno:hover {
-    background-color: rgb(255, 0, 0);
-    color: white;
-    border: none;
-    padding: 15px 30px;
-    font-size: 20px;
-    border-radius: 20px;
-    cursor: pointer;
-    transform: scale(105%);
- }
-

@@ -92,6 +92,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 alert("Pedido confirmado!");
 
                 // Mostra a interface de finalização do pedido e envia mensagem pelo WhatsApp
+                confirmacaoPedido.classList.add('oculto')
                 mostrarAgradecimento(nomeUsuario, enderecoUsuario);
             } else {
                 alert("Por favor, preencha todas as informações para finalizar o pedido.");
@@ -107,6 +108,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function mostrarAgradecimento(nomeUsuario, enderecoUsuario) {
         const overlay = document.querySelector('.overlay');
         const finalizacaoPedido = document.querySelector('.finalizacao-pedido');
+        const itensSelecionados = document.querySelectorAll('.item.selecionado');
 
         // Exibe a interface de finalização do pedido
         finalizacaoPedido.style.display = 'flex';
@@ -139,6 +141,10 @@ document.addEventListener('DOMContentLoaded', function() {
         document.querySelector('.botao-retorno').addEventListener('click', function() {
             finalizacaoPedido.style.display = 'none';
             overlay.classList.add('oculto');
+            itensSelecionados.forEach((item)=>{
+                item.classList.remove('selecionado')
+            });
+            verificarItensSelecionados()
         });
     }
 
