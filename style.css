@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Righteous&display=swap');
+@import url("https://use.typekit.net/aft8ngk.css");
 
 body {
     font-family: 'Righteous Light', sans-serif;
@@ -6,11 +7,10 @@ body {
     font-size: 18px;
     margin: 0;
     padding: 0;
-    background-color: #eaeaea;
 }
 
 .topo {
-    background-color: #220058;
+    background-color: #000000;
     position: fixed;
     width: 100%;
     height: 60px;
@@ -24,10 +24,12 @@ body {
 .titulo {
     width: 100%;
     color: red;
-    margin: 10px 0 10px 40px;
+    margin: 10px 0 10px 100px;
     font-size: 40px;
-    font-family: "Righteous", sans-serif;
+    font-family: "itc-benguiat", serif;
     font-weight: 400;
+    font-style: normal;
+    position: fixed;
 }
 
 .topo_logo_audio {
@@ -42,28 +44,39 @@ body {
 
 .play-button img {
     width: 80px;
-    height: 70px;
+    height: 80px;
 }
 
 .slogan {
     position: fixed;
-    top: 60px;
+    top: 58px;
+    padding-left: 105px;
     width: 100%;
     color: #ffffff;
-    background-color: #220057;
-    padding-left: 34px;
-    box-shadow: 0 8px 10px rgb(96, 93, 100);
+    background-color: #000000;
     z-index: 999;
     height: 32px;
+    border-bottom: #ececec
+    ;
+}
 
+.corpo img{
+    height: 60px;
+    width:412px;
 }
 
 .corpo {
-    background-color: #ececec;
+    background:
+            url('assets/textura.png') repeat,
+            radial-gradient(circle at 30% 30%, #d92929, rgba(0, 0, 0, 0.51) 50%),
+            radial-gradient(circle at 70% 70%, #FF0000, #8B0000 60%);
+    background-blend-mode: multiply; /* Combina as camadas multiplicando as cores */
+    background-size: cover;
     max-width: 100%;
     width: 100%;
-    padding-top: 120px;
-    padding-bottom: 110px;
+    padding-top: 84px;
+    padding-bottom: 150px;
+    height: 100vh;
 }
 
 .categoria {
@@ -75,7 +88,7 @@ body {
 .titulo_corpo {
     margin-top: 8px;
     margin-bottom: 10px;
-    color: #000000;
+    color: #ffffff;
     margin-left: 10px;
     font-size: 20px;
     font-family: "Righteous", sans-serif;
@@ -86,9 +99,8 @@ body {
     display: flex;
     gap: 13px;
     overflow-x: scroll;
-    margin-left: 10px;
-    -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
+    margin: 10px;
 }
 
 .itens::-webkit-scrollbar {
@@ -108,20 +120,19 @@ body {
     height: 216px;
     flex: 0 0 172px;
     object-fit: cover;
-    position: relative;
     cursor: pointer;
-    border: 2px solid transparent;
+    border: 1px solid transparent;
 }
 
 .item.selecionado {
-    border: 2px solid #c71bbe;
-    box-shadow: 0 10px 10px rgb(96, 93, 100);
+    border: 3px solid #d31313;
+    box-shadow: 0 7px 10px rgb(96, 93, 100);
 }
 
 .item:hover {
     transition: background-color 600ms;
-    border-color: #d043c7;
-    transform: scale(105%);
+    border-color: #d31313;
+    transform: scale(100%);
 }
 
 .item img {
@@ -135,17 +146,17 @@ body {
 }
 
 .nome {
-    font-family: "Righteous", sans-serif;
-    color: #220056;
-    font-size: 19px;
+    font-family: "itc-benguiat", serif;
+    color: #d31313;
+    font-size: 17px;
     margin-top: -16px;
 }
 
 .pais {
     font-size: 14px;
-    font-family: "Dancing Script", cursive;
+    font-family: "Dancing Script", serif;
     font-style: italic;
-    color: #220055;
+    color: #8c1919;
     margin-top: 3px;
     margin-bottom: 8px;
 }
@@ -167,100 +178,170 @@ body {
 
 .botao {
     align-content: center;
-    background-color: #220057;
-    padding: 10px;
+    background-color: #020202;
     text-align: center;
     position: fixed;
     bottom: 0;
     width: 100%;
-    height: 80px;
+    height: 92px;
     z-index: 1000;
 }
 
 .botao-finalizar {
-    background-color: #eaeaea;
-    color: #220055;
+    background-color: rgb(227, 70, 70);
+    color: #f8f6f6;
     border: none;
     font-size: 20px;
     border-radius: 50px;
     cursor: pointer;
     width: 364px;
     height: 61px;
+    text-align: center;
+    padding: 10px;
 }
 
-.botao-finalizar:hover {
-    transition: background-color 600ms;
-    cursor: pointer;
-    background-color: #9a9999;
+.botao-finalizar:hover:not(:disabled) {
+    background-color: #e70202;
     color: #ececec;
     transform: scale(105%);
+    cursor: pointer;
 }
 
 .botao-finalizar:disabled {
-    background-color: #c61bbd;
+    background-color: rgba(246, 244, 244, 0.5);
     cursor: not-allowed;
+    transform: none;
+}
+
+.botao-finalizar span {
+    display: block;
 }
 
 .overlay {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%; /* Cobre toda a largura da tela */
-    height: 100%; /* Cobre toda a altura da tela */
-    background-color: rgba(232, 224, 224, 0.7); /* Fundo semitransparente */
-    z-index: 1000; /* Coloca o overlay acima de outros elementos */
-    display: none; /* Começa oculto */
+    width: 100%;
+    height: 100%;
+    background-color: rgba(168, 163, 163, 0.77);
+    z-index: 1000;
 }
 
 .oculto {
-    display: none; /* Esconde o elemento */
+    display: none;
 }
 
-.confirmacao-pedido-oculto {
-    background-color: #4CAF50; /* Cor de fundo verde */
-    color: white; /* Cor do texto */
-    padding: 20px; /* Espaçamento interno */
-    border-radius: 10px; /* Bordas arredondadas */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para destacar o card */
-    text-align: center; /* Centralizar o texto */
-    width: 300px; /* Largura do card */
-    margin: auto; /* Centralizar horizontalmente */
-    position: relative; /* Permite o ajuste de posicionamento se necessário */
+.confirmacao-pedido {
+    background-color: #8c1919;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    justify-content: center;
+    width: 300px;
+    margin: auto;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1001;
 }
 
-.confirmacao-pedido-oculto h2 {
-    font-size: 1.5em; /* Tamanho do título */
-    margin-bottom: 20px; /* Espaçamento abaixo do título */
+.confirmacao-pedido h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
 }
 
 .resumo-pedido {
     list-style-type: none;
-    padding: 0;
-    text-align: left;
+    text-align: center;
     margin-bottom: 20px;
+    padding: 10px;
+    line-height: 1.5;
 }
-
 
 .total-pedido {
     font-size: 1.2em;
     margin-bottom: 20px;
+    line-height: 1.5;
 }
 
 .confirmar-pedido {
-    background-color: white; /* Fundo branco */
-    color: #4CAF50; /* Texto verde */
-    border: none; /* Sem bordas */
-    padding: 10px 20px; /* Espaçamento interno dos botões */
-    border-radius: 20px; /* Bordas arredondadas dos botões */
-    font-size: 1em; /* Tamanho do texto dos botões */
-    cursor: pointer; /* Mãozinha ao passar o mouse */
-    width: 80%; /* Largura dos botões */
-    margin-bottom: 10px; /* Espaçamento entre os botões */
+    background-color: white;
+    color: #8c1919;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 1em;
+    cursor: pointer;
+    width: 80%;
+    margin-bottom: 10px;
+}
+
+.confirmar-pedido:hover {
+    background-color: #8c1919;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 1em;
+    cursor: pointer;
+    width: 80%;
+    margin-bottom: 10px;
 }
 
 .cancelar-pedido {
-    background-color: transparent; /* Fundo transparente para o botão "Cancelar" */
-    color: white; /* Texto branco */
-    border: none; /* Sem bordas */
-    cursor: pointer; /* Mãozinha ao passar o mouse */
+    background-color: rgba(255, 255, 255, 0);
+    color: white;
+    border: none;
+    cursor: pointer;
+    justify-content: flex-end;
 }
+
+.finalizacao-pedido {
+    display: none; /* Certifica que ela está escondida inicialmente */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #8B0000;
+    font-family: "itc-benguiat", serif;
+    font-size: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2000;
+    text-align: center;
+}
+
+.gif-obrigado {
+    max-width: 200px;
+    height: 300px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.botao-retorno {
+    background-color: rgba(45, 42, 42, 0.5);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 20px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+ .botao-retorno:hover {
+    background-color: rgb(255, 0, 0);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    transform: scale(105%);
+ }
+

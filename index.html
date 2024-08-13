@@ -16,7 +16,7 @@
         <div class="topo_logo_audio">
             <button id="play-button" class="play-button">
                 <img src="assets/play.png" alt="Play">
-                <audio id="stranger-audio" src="assets/music.mp3"></audio>
+                <audio id="stranger-audio" src="assets/music.mp3" loop></audio>
             </button>
         </div>
     </div>
@@ -24,14 +24,12 @@
         <p>Sua comida exótica em 6 minutos!</p>
     </div>
     <div class="corpo">
-<!--        <div class="borda">-->
-<!--            <img src="assets/borda.png" alt="borda">-->
-<!--        </div>-->
+        <img src="assets/pisca.png" alt="pisca" class="pisca">
         <div class="categoria">
             <h2 class="titulo_corpo">Primeiro, escolha seu prato.</h2>
             <div class="itens">
                 <div class="item" data-categoria="pratos">
-                    <img src="assets/stargazy.png" alt="stargazy"> <br>
+                    <img src="assets/stargazy.png" alt="stargazy"><br>
                     <p class="nome">Stargazy</p>
                     <p class="pais">Inglaterra</p>
                     <p class="descricao">Torta de sardinhas assadas com as cabeças para fora.</p>
@@ -102,7 +100,7 @@
                     <img src="assets/dedo.png" alt="dedo"><br>
                     <p class="nome">Sourtoe Cocktail</p>
                     <p class="pais">Canadá</p>
-                    <p class="descricao">Os lábios devem tocar o dedo com wisky.</p>
+                    <p class="descricao">Dedo humano com wisky, os lábios devem tocar o dedo.</p>
                     <p class="preco">R$ 75,00</p>
                 </div>
             </div>
@@ -111,35 +109,35 @@
             <h2 class="titulo_corpo">Finalmente, escolha sua sobremessa!</h2>
             <div class="itens">
                 <div class="item" data-categoria="sobremesas">
-                    <img src="assets/tavu.png" alt="tavu"> <br>
+                    <img src="assets/tavu.png" alt="tavu"><br>
                     <p class="nome">Tavuk göğsü</p>
                     <p class="pais">Turquia</p>
                     <p class="descricao">Peito de frango com leite condensado e canela.</p>
                     <p class="preco">R$ 20,00</p>
                 </div>
                 <div class="item" data-categoria="sobremesas">
-                    <img src="assets/aletria.png" alt="aletria"> <br>
+                    <img src="assets/aletria.png" alt="aletria"><br>
                     <p class="nome">Aletria </p>
                     <p class="pais">Portugal</p>
                     <p class="descricao"> Macarrão ao leite com casca de limão e canela.</p>
                     <p class="preco">R$ 27,50</p>
                 </div>
                 <div class="item" data-categoria="sobremesas">
-                    <img src="assets/gelatina.png" alt="jell"> <br>
+                    <img src="assets/gelatina.png" alt="jell"> br>
                     <p class="nome">Jell-O Salad</p>
                     <p class="pais">EUA</p>
                     <p class="descricao">Combinação de gelatina com uma variedade de vegetais.</p>
                     <p class="preco">R$ 25,00</p>
                 </div>
                 <div class="item" data-categoria="sobremesas">
-                    <img src="assets/choco.png" alt="barra"> <br>
+                    <img src="assets/choco.png" alt="barra"><br>
                     <p class="nome">Chocolarvas</p>
                     <p class="pais">Portugal</p>
                     <p class="descricao">Barrinha proteica de larvas com chocolate.</p>
                     <p class="preco">R$ 30,00</p>
                 </div>
                 <div class="item" data-categoria="sobremesas">
-                    <img src="assets/bolinho.png" alt="brownie"> <br>
+                    <img src="assets/bolinho.png" alt="brownie"><br>
                     <p class="nome">Sanguinaccio Dolce</p>
                     <p class="pais">Itália</p>
                     <p class="descricao">Pudim de chocolate feito com sangue de porco.</p>
@@ -147,18 +145,24 @@
                 </div>
             </div>
         </div>
-        <div class="overlay oculto"></div>
-        <div class="confirmacao-pedido-oculto">
-            <h2>Confirme seu pedido</h2>
-            <ul class="resumo-pedido"></ul>
-            <p>Total: <span class="total-pedido"></span></p>
-            <button class="confirmar-pedido">Tudo certo, pode pedir!</button><br>
-            <button class="cancelar-pedido">Cancelar</button>
+        <div class="botao">
+            <button class="botao-finalizar">Selecione os 3 itens <br> para fechar o pedido<br></button>
         </div>
     </div>
-    <div class="botao">
-        <button class="botao-finalizar">Selecione os 3 itens <br> para fechar o pedido<br></button>
+    <div class="overlay oculto"></div>
+    <div class="confirmacao-pedido oculto">
+        <h2>Confirme seu pedido</h2>
+        <ul class="resumo-pedido"></ul>
+        <p>Total: <span class="total-pedido"></span></p>
+        <button class="confirmar-pedido">Tudo certo, pode pedir!</button><br>
+        <button class="cancelar-pedido">Cancelar</button>
     </div>
-<script src="script.js"></script>
+
+    <div class="finalizacao-pedido oculto">
+        <h2>Hora de matar a fome!</h2>
+        <img src="assets/obrigada.gif" alt="GIF" class="gif-obrigado">
+        <button class="botao-retorno">Quer mais um aperitivo?</button>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
